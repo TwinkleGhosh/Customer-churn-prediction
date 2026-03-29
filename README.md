@@ -34,7 +34,9 @@ Customer churn is one of the most critical problems for subscription-based busin
 
 ---
 
-## Project Structure
+## 📂 Project Structure
+
+```
 Customer-Churn-Prediction/
 │
 ├── app.py                      # Streamlit dashboard
@@ -44,7 +46,7 @@ Customer-Churn-Prediction/
 ├── data/
 │   └── churn.csv               # Dataset
 │
-├── model.pkl                   # Trained Random Forest model
+├── model.pkl                   # Trained model
 ├── columns.pkl                 # Feature columns
 ├── sample_input.pkl            # Sample input template
 │
@@ -55,8 +57,7 @@ Customer-Churn-Prediction/
 ├── requirements.txt            # Dependencies
 ├── README.md                   # Project documentation
 └── .gitignore                  # Ignore unnecessary files
----
-
+```
 ## How It Works
 
 1. Data is cleaned and preprocessed
