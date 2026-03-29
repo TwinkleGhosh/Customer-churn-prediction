@@ -100,11 +100,15 @@ streamlit run app.py
 Open in browser:
 http://localhost:8501
 
+---
+
 🎯 Future Improvements
 Add more input features in UI
 Deploy app on cloud (Streamlit Cloud / Render)
 Add feature importance visualization
 Improve model with hyperparameter tuning
+
+---
 
 💼 Why This Project Matters
 
@@ -115,8 +119,14 @@ Real-world problem solving
 Model deployment
 Data storytelling using dashboards
 
+---
+
 👤 Author
 
 Twinkle Ghosh
 
+---
+
 ⭐ If you found this project useful, consider giving it a star!
+
+---
