@@ -35,26 +35,26 @@ Customer churn is one of the most critical problems for subscription-based busin
 ---
 
 ## Project Structure
-Customer-Churn/
+Customer-Churn-Prediction/
 │
-├── main.py # Model training script
-├── app.py # Streamlit dashboard
-├── eda.py # Exploratory Data Analysis
+├── app.py                      # Streamlit dashboard
+├── main.py                     # Model training script
+├── eda.py                      # EDA and graph generation
 │
 ├── data/
-│ └── churn.csv # Dataset
+│   └── churn.csv               # Dataset
 │
-├── model.pkl # Trained model
-├── columns.pkl # Feature columns
-├── sample_input.pkl # Sample input template
+├── model.pkl                   # Trained Random Forest model
+├── columns.pkl                 # Feature columns
+├── sample_input.pkl            # Sample input template
 │
-├── tenure_distribution.png
-├── tenure_vs_churn.png
-├── churn_rate.png
+├── tenure_distribution.png     # EDA graph
+├── tenure_vs_churn.png         # EDA graph
+├── churn_rate.png              # EDA graph
 │
-└── README.md
-
-
+├── requirements.txt            # Dependencies
+├── README.md                   # Project documentation
+└── .gitignore                  # Ignore unnecessary files
 ---
 
 ## How It Works
@@ -83,16 +83,21 @@ Customer-Churn/
 
 ---
 
-## To Run Locally
+## 💻 Run Locally
 
-### Clone the repository
+### 1️⃣ Clone the repository
 
 ```bash
 git clone https://github.com/TwinkleGhosh/customer-churn.git
 cd customer-churn
+
 pip install -r requirements.txt
+
 python eda.py
+
 streamlit run app.py
+Open in browser:
+http://localhost:8501
 
 🎯 Future Improvements
 Add more input features in UI
@@ -109,7 +114,7 @@ Real-world problem solving
 Model deployment
 Data storytelling using dashboards
 
-🙌 Author
+👤 Author
 
 Twinkle Ghosh
 
