@@ -58,75 +58,90 @@ Customer-Churn-Prediction/
 ├── README.md                   # Project documentation
 └── .gitignore                  # Ignore unnecessary files
 ```
-## How It Works
 
-1. Data is cleaned and preprocessed
-2. Categorical variables are encoded
-3. SMOTE is applied to handle class imbalance
-4. A Random Forest model is trained
-5. The model predicts churn probability
-6. Results are displayed in an interactive Streamlit dashboard
 
 ---
 
-## Model Performance
+## ⚙️ How It Works
 
-- Accuracy: ~77%
-- Improved prediction using Random Forest over Logistic Regression
-- Better handling of feature interactions and complex patterns
+1. Data is cleaned and preprocessed  
+2. Categorical variables are encoded  
+3. SMOTE is applied to handle class imbalance  
+4. A Random Forest model is trained  
+5. The model predicts churn probability  
+6. Results are displayed in an interactive Streamlit dashboard  
 
-## Key Insights
+---
 
-- Customers with low tenure are more likely to churn
-- Month-to-month contracts have higher churn rates
-- Higher monthly charges increase churn probability
-- Long-term customers are more loyal
+## 📊 Model Performance
+
+- Accuracy: ~77%  
+- Improved performance using Random Forest over Logistic Regression  
+- Better handling of feature interactions and complex patterns  
+
+---
+
+## 📈 Key Insights
+
+- Customers with low tenure are more likely to churn  
+- Month-to-month contracts have higher churn rates  
+- Higher monthly charges increase churn probability  
+- Long-term customers are more loyal  
 
 ---
 
 ## 💻 Run Locally
 
 ### 1️⃣ Clone the repository
-
 ```bash
 git clone https://github.com/TwinkleGhosh/customer-churn.git
 cd customer-churn
+```
 
+### 2️⃣ Install dependencies
+```bash
 pip install -r requirements.txt
+```
 
+### 3️⃣ Run EDA (optional)
+```bash
 python eda.py
+```
 
+### 4️⃣ Run the Streamlit app
+```bash
 streamlit run app.py
-Open in browser:
+```
+
+👉 Open in browser:  
 http://localhost:8501
 
 ---
 
-🎯 Future Improvements
-Add more input features in UI
-Deploy app on cloud (Streamlit Cloud / Render)
-Add feature importance visualization
-Improve model with hyperparameter tuning
+## 🚀 Future Improvements
+
+- Add more input features in UI  
+- Deploy app on cloud (Streamlit Cloud / Render)  
+- Add feature importance visualization  
+- Improve model with hyperparameter tuning  
 
 ---
 
-💼 Why This Project Matters
+## 💼 Why This Project Matters
 
 This project demonstrates:
 
-End-to-end ML pipeline
-Real-world problem solving
-Model deployment
-Data storytelling using dashboards
+- End-to-end ML pipeline  
+- Real-world problem solving  
+- Model deployment  
+- Data storytelling using dashboards  
 
 ---
 
-👤 Author
+## 👤 Author
 
-Twinkle Ghosh
+**Twinkle Ghosh**
 
 ---
 
 ⭐ If you found this project useful, consider giving it a star!
-
----
