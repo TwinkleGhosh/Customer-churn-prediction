@@ -1,30 +1,29 @@
-# =========================
-# 1. IMPORT LIBRARIES
-# =========================
+# IMPORT LIBRARIES
 import streamlit as st
 import pickle
 import numpy as np
 import pandas as pd
 
-# =========================
-# 2. LOAD MODEL FILES
-# =========================
+# LOAD MODEL FILES
+
 model = pickle.load(open("model.pkl", "rb"))
 columns = pickle.load(open("columns.pkl", "rb"))
 
-# 3. PAGE CONFIG
-# =========================
+# PAGE CONFIG
+
 st.set_page_config(page_title="Churn Prediction", layout="wide")
-# =========================
-# 3. APP TITLE
-# =========================
+
+# APP TITLE
+
 st.title("📊 Customer Churn Prediction App")
 st.write("Predict whether a customer will leave the service")
+
 # Adding Tabs
+
 tab1, tab2 = st.tabs(["📊 Prediction", "📈 Insights"])
-# =========================
-# 4. USER INPUT SECTION
-# =========================
+
+# USER INPUT SECTION
+
 st.sidebar.header("Enter Customer Details")
 
 tenure = st.sidebar.slider("Tenure (months)", 0, 72, 12)
@@ -32,16 +31,17 @@ monthly_charges = st.sidebar.number_input("Monthly Charges", value=50.0)
 total_charges = st.sidebar.number_input("Total Charges", value=500.0)
 
 # Dropdowns
+
 gender = st.sidebar.selectbox("Gender", ["Male", "Female"])
 senior = st.sidebar.selectbox("Senior Citizen", [0, 1])
 contract = st.sidebar.selectbox("Contract", ["Month-to-month", "One year", "Two year"])
 
-# =========================
-# 5. CREATE INPUT DATAFRAME
-# =========================
+# CREATE INPUT DATAFRAME
+
 input_df = pickle.load(open("sample_input.pkl", "rb")).copy()
 
 # Fill important features
+
 input_df["tenure"] = tenure
 input_df["MonthlyCharges"] = monthly_charges
 input_df["TotalCharges"] = total_charges
@@ -56,21 +56,21 @@ elif contract == "Two year":
 
 
 # Gender encoding
+
 if "gender_Male" in input_df.columns:
     input_df["gender_Male"] = 1 if gender == "Male" else 0
 
 # Senior citizen
+
 if "SeniorCitizen" in input_df.columns:
     input_df["SeniorCitizen"] = senior
 
-# =========================
-# 6. SCALE INPUT
-# =========================
+# SCALE INPUT
+
 input_scaled = input_df
 
-# =========================
-# 7. PREDICTION BUTTON
-# =========================
+# PREDICTION BUTTON
+
 with tab1:
 
     st.subheader("Predict Customer Churn")
@@ -100,8 +100,7 @@ with tab2:
     st.image("tenure_vs_churn.png", caption="Tenure vs Churn")
     st.image("churn_rate.png", caption="Churn Rate by Tenure Group")
 
-# =========================
-# 9. FOOTER (OPTIONAL)
-# =========================
+# FOOTER (OPTIONAL)
+
 st.write("---")
 st.write("Built using Machine Learning + Streamlit")
